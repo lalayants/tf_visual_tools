@@ -15,7 +15,7 @@ This open source project was developed at [PickNik Robotics](https://picknik.ai/
 
 To build this package, ``git clone`` this repo into a [catkin workspace](http://wiki.ros.org/catkin/Tutorials/create_a_workspace) and be sure to install necessary dependencies by running the following command in the root of your catkin workspace:
 
-    rosdep install -y --from-paths src --ignore-src --rosdistro kinetic
+    rosdep install -y --from-paths src --ignore-src --rosdistro noetic
 ## Usage of TF Visual Tools:
 
 * Start Rviz and add the TF Visual Tools GUI to Rviz: `Panels > Add New Panel`
