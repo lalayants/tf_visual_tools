@@ -5,17 +5,16 @@ from std_msgs.msg import String
 import geometry_msgs.msg
 import tf
 import sys
-# import yaml
-    
-# if len(sys.argv) > 1:
-#     with open(sys.argv[1], 'r') as file:
-#         cfg = yaml.safe_load(file)
-#         pub_topic = cfg['goal_pose_sub_topic_name']
-#         map_frame = cfg['map_frame']
-#         robot_frame = cfg['robot_frame']
-#         goal_frame = cfg['goal_frame']  
-if 1>2:
-    print('1')
+import yaml
+print("!!!!!!!!!!!!!!!!",sys.argv[1])    
+if not 'name' in sys.argv[1]:
+    with open(sys.argv[1], 'r') as file:
+        print('!!!!!!!!!!!!!!!!yaml')
+        cfg = yaml.safe_load(file)
+        pub_topic = cfg['goal_pose_sub_topic_name']
+        map_frame = cfg['map_frame']
+        robot_frame = cfg['robot_frame']
+        goal_frame = cfg['goal_frame']  
 else:
     pub_topic = 'goal_pose_sub_topic_name'
     map_frame = 'map'
